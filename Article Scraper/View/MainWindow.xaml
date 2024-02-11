@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Article_Scraper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Health Scraper" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.8*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.05*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Content="This web-scraper will help you to scrape all the text&#10;from the medical article you are looking for!"
+                   HorizontalContentAlignment="Left" VerticalContentAlignment="Center"
+                   FontFamily="Arial" FontSize="25"/>
+            
+            <!--Input field-->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.75*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Enter your URL:"
+                       VerticalAlignment="Center"
+                       FontFamily="Arial" FontSize="20"/>
+                <TextBox Grid.Column="1"
+                     FontSize="20" Margin="40, 30"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                         x:Name="urlTextBox"/>
+            </Grid>
+            
+            <!--Button-->
+            <Button Grid.Row="3" Margin="200, 30"
+                    Content="Scrape"
+                    FontFamily="Arial" FontSize="25"
+                    x:Name="scrapeButton"/>
+        </Grid>
     </Grid>
 </Window>
